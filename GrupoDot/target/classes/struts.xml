@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="hibernate-default">
+		<action name="saveOrUpdateMovie" method="saveOrUpdate" class="com.web.MovieAction">
+			<result name="success" type="redirect">listMovie</result>
+		</action>
+		<action name="listMovie" method="list" class="com.web.MovieAction">
+			<result name="success">/registerMovie.jsp</result>
+		</action>
+		<action name="editMovie" method="edit" class="com.web.MovieAction">
+			<result name="success">/registerMovie.jsp</result>
+		</action>
+		<action name="deleteMovie" method="delete" class="com.web.MovieAction">
+			<result name="success" type="redirect">listMovie</result>
+		</action>
+	</package>
+</struts>
